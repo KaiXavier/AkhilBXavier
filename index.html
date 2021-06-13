@@ -1,140 +1,122 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Home</title>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	
-
+    <title>Home page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
+
 <body>
-	<div class="w3-bar w3-border w3-black">
-  		<a href="#" class="w3-bar-item w3-button">Home</a>
-		<a href="About.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white">About Me</a>
-		<a href="gallery.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white">Gallery</a>
-	</div>
-	<div class="w3-container">
-	<div class="w3-panel w3-card w3-light-grey">
-			<h3>
-			  	<div class="w3-container w3-center w3-animate-zoom">
-				  	<h1>Hi Everyone!!</h1>
-				  	<p><h3>Welcome to my Page</h3></p>
-				</div>
-			</h3>
-				<div class="w3-container w3-white w3-animate-left">
-			    <p>
-			    <ul class="w3-ul w3-card-4" style="width:100%">
-			    	<li>
-				      	<div class="w3-content w3-section" style="max-width:98%">
-				  			<img class="mySlides" src="image\6.jpg" style="width:100%">
-				  			<img class="mySlides" src="image\7.jpg" style="width:100%">
-				 			<img class="mySlides" src="image\1.jpg" style="width:100%">
-						</div>
-					</li>
-			<script>
-			var myIndex = 0;
-			carousel();
+    <div class="w3-bar w3-border w3-black">
+        <a href="#" class="w3-bar-item w3-button">Home</a>
+        <a href="gallery.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white">Gallery</a>
+    </div>
+    <div class="container w3-animate-zoom">
 
-			function carousel() 
-			{
-				file:
-				var i;
-			  	var x = document.getElementsByClassName("mySlides");
-				for (i = 0; i < x.length; i++)
-				{
-					x[i].style.display = "none";  
-				}
-				myIndex++;
-				if (myIndex > x.length) {myIndex = 1}    
-				x[myIndex-1].style.display = "block";  
-				setTimeout(carousel, 3500); // Change image every 2 seconds
-			}
-			</script>
-			    	</li>
-			    </ul>
-			    <br>
-			    <ul class="w3-ul w3-card-4" style="width:100%">
-			    	<li>
-			      	<div class="w3-container w3-margin w3-cursive">
-						<h1>What is my progress</h1>
-						<h3>my success percentage</h3>
-						<div class="w3-light-grey">
-							<div id="myBar" class="w3-container w3-round w3-black w3-center" style="width:0%">0%</div>
-						</div>
-						<br>
-						<button class="w3-button w3-black" onclick="move()">check</button> <br>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#About">
+                        About Me
+                    </a>
+                </div>
+                <div id="About" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="card-body">
 
-						<script>
-							function move() {
-								var elem = document.getElementById("myBar");   
-								var width = 0;
-								var id = setInterval(frame, 10);
-								function frame() {
-								    if (width >= 100)
-								    {
-								    	clearInterval(id);
-								    } else 
-								    {
-									    width++; 
-									    elem.style.width = width + '%'; 
-									    elem.innerHTML = width * 1  + '%';
-								    }
-								  }
-							}
-						</script>
-						<br><br><br>
+                            <div class="w3-container">
+                                <p>
+                                <h3>I'm Akhil B Xavier,<br>
+                                    I'm a B-Tech 1st year student at AISAT.<br>
+                                    acquiring new skills and learning new things is my hobbies
+                                </h3>
+                                </p>
+                            </div>
+                            <footer class="w3-container w3-yellow">
+                                <h5>And Also:-</h5>
+                                <h4>
+                                    <ul>
+                                        <li>Programmer</li>
+                                        <ul>
+                                            <li>C++</li>
+                                            <li>HTML</li>
+                                            <li>JS</li>
+                                            <li>php</li>
+                                            <li>MySQL</li>
+                                            <li>Python</li>
+                                        </ul>
+                                        <li>Logo Designer</li>
+                                        <li>Bot Devloper</li>
+                                        <li>Game Devloper (Mainly focused at Concept Art)</li>
+                                        <li>I like photograghy</li>
+                                    </ul>
+                                </h4>
+                            </footer>
+                        </div>
 
-						<h2>Skill level</h2>
-						<br>
-						<div class="w3-light-grey">
-							<h3>HTML</h3>
-								<div class="w3-container w3-green w3-center" style="width:75%">75%</div>
-						</div><!-- <br> -->
-							<h3>JS</h3>
-							<div class="w3-light-grey">
-								<div class="w3-container w3-red" style="width:25%">25%</div>
-							</div>
-							<!-- <br> -->
-							<h3>CSS</h3>
-							<div class="w3-light-grey">
-							   <div class="w3-container w3-yellow w3-center" style="width:50%">50%</div>
-							</div>
-							<br>
-							<h3>C++</h3>
-							<div class="w3-light-grey">
-							   <div class="w3-container w3-green w3-center" style="width:85%">85%</div>
-							</div>
-							<br>
-							<h3>PYTHON</h3>
-							<div class="w3-light-grey">
-							   <div class="w3-container w3-orange w3-center" style="width:45%">45%</div>
-							</div>
-						</div>
 
-					</li>
-				</ul>
-			    <br>
-			    <ul class="w3-ul">
-			   	<li>
-			   		<div class="w3-card w3-card-3" style="width:30%">
-    					<img src="image/AK.jpg" alt="Person" style="width:100%">
-    						<div class="w3-container w3-center" style="width:100%">
-    							<h4><b>Akhil B Xavier</b></h4>
-    							<p>A Genius in Disguise</p>
-    						</div>
-					</div>
-					
-			   	</li>
-				</ul>
-			</p>
-			</div>
-			<p>
-			  	
-			</p>
-			</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#Skill">
+                            Skill Level
+                        </a>
+                    </div>
+                    <div id="Skill" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="w3-light-grey">
+                                <h3>HTML</h3>
+                                <div class="w3-container w3-green w3-center" style="width:75%">75%</div>
+                            </div><!-- <br> -->
 
-</div>
+                            <div class="w3-light-grey">
+                                <h3>JS</h3>
+                                <div class="w3-container w3-red" style="width:25%">25%</div>
+                            </div>
+                            <!-- <br> -->
+
+                            <div class="w3-light-grey">
+                                <h3>CSS</h3>
+                                <div class="w3-container w3-yellow w3-center" style="width:50%">50%</div>
+                            </div>
+                            <br>
+
+                            <div class="w3-light-grey">
+                                <h3>C++</h3>
+                                <div class="w3-container w3-green w3-center" style="width:85%">85%</div>
+                            </div>
+                            <br>
+
+                            <div class="w3-light-grey">
+                                <h3>PYTHON</h3>
+                                <div class="w3-container w3-orange w3-center" style="width:45%">45%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+          Collapsible Group Item #3
+        </a>
+      </div>
+      <div id="collapseThree" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div> -->
+        </div>
+    </div>
 
 </body>
+
 </html>
